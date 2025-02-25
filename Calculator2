@@ -1,0 +1,40 @@
+def calculator():
+    while True:
+        print("\n--- Hesap Makinesi ---")
+        print("1. Toplama")
+        print("2. Çıkarma")
+        print("3. Çarpma")
+        print("4. Bölme")
+        print("5. Çıkış")
+        
+        choice = input("Seçiminizi yapın (1-5): ")
+        
+        if choice == '5':
+            print("Hesap makinesi kapatılıyor...")
+            break
+        
+        if choice not in ('1', '2', '3', '4'):
+            print("Geçersiz giriş! Lütfen tekrar deneyin.")
+            continue
+        
+        try:
+            num1 = float(input("Birinci sayıyı girin: "))
+            num2 = float(input("İkinci sayıyı girin: "))
+        except ValueError:
+            print("Hatalı giriş! Lütfen sayısal bir değer girin.")
+            continue
+        
+        if choice == '1':
+            print(f"Sonuç: {num1} + {num2} = {num1 + num2}")
+        elif choice == '2':
+            print(f"Sonuç: {num1} - {num2} = {num1 - num2}")
+        elif choice == '3':
+            print(f"Sonuç: {num1} * {num2} = {num1 * num2}")
+        elif choice == '4':
+            if num2 == 0:
+                print("Hata: Sıfıra bölme yapılamaz!")
+            else:
+                print(f"Sonuç: {num1} / {num2} = {num1 / num2}")
+
+if __name__ == "__main__":
+    calculator()
