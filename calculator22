@@ -5,7 +5,7 @@ def calculator():
         print("2. Çıkarma")
         print("3. Çarpma")
         print("4. Bölme")
-        print("5. Çıkış")
+        print("5. Çıkış budur:")
         
         choice = input("Seçiminizi yapın (1-5): ")
         
